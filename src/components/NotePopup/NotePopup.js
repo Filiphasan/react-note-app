@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import reqUrl from '../../Helpers/requestUrl'
 import './NotePopup.css'
 
-const NotePopup = ({ popup, setPopup, pushNote, user_id, token }) => {
+const NotePopup = ({ popup, setPopup, pushNote, user_id, token, isUpdate }) => {
     const addNote = (e) => {
         e.preventDefault()
         const title = e.target.title.value
@@ -20,11 +20,15 @@ const NotePopup = ({ popup, setPopup, pushNote, user_id, token }) => {
     return (
         <>
             <div className={`modal ${popup ? 'opened' : ''}`}>
-                <div className="modal-overlay modal-toggle" onClick={() => setPopup(false)}></div>
+                <div className="modal-overlay modal-toggle" onClick={() => {
+                    setPopup(false)
+                }}></div>
                 <div className="modal-wrapper modal-transition">
                     <div className="modal-header">
-                        <button className="modal-close modal-toggle" onClick={() => setPopup(false)}><i className="fas fa-times"></i></button>
-                        <h2 className="modal-heading"><i className="fas fa-plus"></i> Not Ekle</h2>
+                        <button className="modal-close modal-toggle" onClick={() => {
+                            setPopup(false)
+                        }}><i className="fas fa-times"></i></button>
+                        <h2 className="modal-heading"><i className="fas fa-plus"></i> Not {`${isUpdate ? 'Güncelle' : 'Ekle'}`}</h2>
                     </div>
                     <div className="modal-body">
                         <div className="modal-content">

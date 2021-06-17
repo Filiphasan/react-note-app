@@ -11,6 +11,7 @@ const Notes = () => {
     const userId = jwtDecode(token).user_id
     const [userNotes, setUserNotes] = useState([])
     const [popup, setPopup] = useState(false)
+    const [isUpdate, setIsUpdate] = useState(false)
     useEffect(() => {
         axios.get(`${reqUrl}note/${userId}`, { headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' } })
             .then(response => { setUserNotes(response.data.data) })
@@ -34,7 +35,7 @@ const Notes = () => {
     }
     return (
         <>
-            <NotePopup popup={popup} setPopup={setPopup} pushNote={pushNote} user_id={userId} token={token} />
+            <NotePopup popup={popup} setPopup={setPopup} pushNote={pushNote} isUpdate={isUpdate} user_id={userId} token={token} />
             <Navbar />
             <div className="note-page">
                 <div className="container">
@@ -54,7 +55,7 @@ const Notes = () => {
                                             </div>
                                             <div className="note-action">
                                                 <button className="note-btn note-delete" title="Sil" onClick={() => deleteNote(note.id)}><i className="fas fa-trash"></i></button>
-                                                <button className="note-btn note-edit" title="Düzenle"><i className="fas fa-edit"></i></button>
+                                                <button className="note-btn note-edit" title="Düzenle" ><i className="fas fa-edit"></i></button>
                                             </div>
                                         </div>
                                     )
