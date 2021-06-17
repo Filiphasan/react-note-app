@@ -1,0 +1,79 @@
+.login-page {
+    background: url(http://gemlikhafriyat.com/wp-content/uploads/2016/09/login-bg.png) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login {
+    background-color: #BEE5D3;
+    color: #3b5360;
+    padding: 5em 0;
+    width: 40%;
+    border-radius: 1em;
+}
+.login-title {
+    text-align: center;
+    font-size: 4em;
+}
+.login-validate {
+    margin: 2em 0;
+    padding: 1em;
+    font-size: 1.5em;
+    border-radius: 0.5em;
+    background-color: #d6b0b1;
+}
+.login .form-container {
+    width: 50%;
+    margin: 0 auto;
+}
+.login .form-group {
+    position: relative;
+    margin: 2em 0;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
+.login .form-group i {
+    position: absolute;
+}
+.login .form-group .form-input {
+    width: 100%;
+    padding: 1em 0;
+    padding-left: 2em;
+    font-size: 1em;
+    color: #3b5360;
+    background: transparent;
+    border-bottom: 2px solid #3b5360;
+}
+.login .form-group .form-input:focus + span {
+    width: 100%;
+}
+.login .form-group span {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.5s ease-in-out;
+}
+.login .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.login .form-buttons .form-button {
+    width: 40%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    background: #3b5360;
+    background: -webkit-linear-gradient(to right, #3b5360, #8b5e83);
+    background: linear-gradient(to right, #3b5360, #8b5e83);
+}
+.form-button-signup{
+    text-align: center;
+    font-size: 1.25em;
+}

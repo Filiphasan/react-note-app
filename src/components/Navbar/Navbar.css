@@ -1,0 +1,21 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background-color: #3B5360;
+    color: #fff;
+    border-bottom: solid 3px #BEE5D3;
+}
+.navbar-title{
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+.navbar-logout{
+    color: #fff;
+    font-size: 2em;
+}
+.navbar-logout:hover{
+    color: #a0a0a0;
+}
